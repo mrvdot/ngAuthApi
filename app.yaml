@@ -1,0 +1,12 @@
+application: ng-auth-api
+version: alpha
+runtime: go
+api_version: go1
+instance_class: F1
+
+handlers:
+- url: /_ah(/.*)
+  script: _go_app
+  login: admin
+- url: /.*
+  script: _go_app
